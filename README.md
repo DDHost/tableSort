@@ -1,2 +1,2 @@
-# tableSort
-sort html tables with js
+# tableSort - Sort HTML Tables with vanilla js
+
