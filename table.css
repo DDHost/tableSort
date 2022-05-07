@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* //////////////////////////////////////// */
+/* //////////// Global Style ////////////// */
+/* //////////////////////////////////////// */
+
+table {
+    width: 100%;
+    height: 100%;
+    display: table;
+    box-sizing: border-box;
+    --table-header-bg-color: #cdf2ca;
+    --table-rows-border-bg-color: #494454;
+    --table-body-row-even-bg-color: rgba(205, 242, 202, 0.4);
+    --table-body-row-odd-bg-color: rgba(205, 242, 202, 0.6);
+    --table-body-row-font-color: #494454;
+}
+
+table thead,
+table tbody,
+table tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+/* global rows */
+table tbody tr {
+    border-bottom: 1px solid var(--table-rows-border-bg-color);
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    overflow-x: hidden;
+}
+
+/* //////////////////////////////////////// */
+
+/* //////////////////////////////////////// */
+/* ///////// Header/Column Style ////////// */
+/* //////////////////////////////////////// */
+
+/* /// Header/Column row style /// */
+table thead {
+    background: var(--table-header-bg-color);
+}
+
+table thead tr {
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+table thead tr th span {
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+table thead tr th[data-table-sort='asc']::after {
+    content: '▲';
+}
+
+table thead tr th[data-table-sort='desc']::after {
+    content: '▼';
+}
+
+/* //////////////////////////////////////// */
+
+/* //////////////////////////////////////// */
+/* /////// Body/Row Contents Style //////// */
+/* //////////////////////////////////////// */
+
+table tbody {
+    display: block;
+    table-layout: fixed;
+}
+
+/* /// Body Row Cell /// */
+
+table tbody tr td input {
+    padding: 5px;
+
+    border-radius: 5px;
+    width: 100%;
+    direction: rtl;
+    background-color: #fff;
+    border: none;
+}
+
+/* /// even row /// */
+table tbody tr {
+    text-align: center;
+    background-color: var(--table-body-row-even-bg-color);
+    color: var(--table-body-row-font-color);
+}
+
+/* /// odd row /// */
+table tbody tr:nth-child(even) {
+    background-color: var(--table-body-row-odd-bg-color);
+    color: var(--table-body-row-font-color);
+}
+
+/* //////////////////////////////////////// */
+
+/* ///////////////////////////////// */
+/* /////// Error row Style  //////// */
+/* ///////////////////////////////// */
+
+table tr.Error {
+    position: relative;
+}
+
+/* //////////////////////////////////////// */
+
+/* //////////////////////////////////////// */
+
+/* ///////////////////////////////// */
+/* /////// Scroll Style  //////// */
+/* ///////////////////////////////// */
+
+table {
+    position: relative;
+}
+
+/* //////////////////////////////////////// */
